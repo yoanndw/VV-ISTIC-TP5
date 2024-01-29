@@ -12,4 +12,9 @@ Include in this document the code of the test and, if you did it, the link to th
 
 ## Answer
 
+### Reproduction du bug
 
+- Créer un sondage
+- Cliquer sur le premier lien pour accéder au sondage
+- Poster un commentaire
+- **Bug :** une fois le commentaire posté, le bouton "Ajouter commentaire" est grisé. Rafraîchir la page le rend à nouveau fonctionnel
