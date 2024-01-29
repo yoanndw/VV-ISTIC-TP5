@@ -20,18 +20,33 @@ import fr.istic.ydewilde.model.CreatePollPage;
  * Unit test for simple App.
  */
 public class CreatePollTest {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void couldNotGoToNextPollCreationStepsWhenOnFirstStep() {
+    public void couldGoToPollCreationStep1WhenOnStep1() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:4200/create");
+        System.out.println(driver.getTitle());
+    
+        CreatePollPage createPollPage = new CreatePollPage(driver);
+        assertTrue(createPollPage.canGoToStep1());
+    }
+
+    @Test
+    public void couldNotGoToPollCreationStep2WhenOnStep1() {
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:4200/create");
         System.out.println(driver.getTitle());
 
         CreatePollPage createPollPage = new CreatePollPage(driver);
-        assertTrue(createPollPage.canGoToStep1());
         assertFalse(createPollPage.canGoToStep2());
+    }
+
+    @Test
+    public void couldNotGoToPollCreationStep3WhenOnStep1() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:4200/create");
+        System.out.println(driver.getTitle());
+
+        CreatePollPage createPollPage = new CreatePollPage(driver);
         assertFalse(createPollPage.canGoToStep3());
     }
 }
