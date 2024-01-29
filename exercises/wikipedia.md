@@ -17,6 +17,8 @@ Include the code of the walker and the snapshot in this document.
 
 ## Answer
 
+Code également disponible [ici](../code/exo-1-wikipedia/src/main/java/fr/istic/ydewilde/App.java).
+
 ```java
 public class App {
     private static String SCREENSHOT_PATH = "./exo1_wikipedia_screenshot.png";

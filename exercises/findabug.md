@@ -1,6 +1,8 @@
 # Find a bug
 
-
+Yoann DEWILDE\
+Enora DANILO\
+M2 ILa - Groupe 1
 
 Clone the [Simba Organizer repository](https://github.com/selabs-ur1/doodle) and follow the instructions to run the application on your machine.
 

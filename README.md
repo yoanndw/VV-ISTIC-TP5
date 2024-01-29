@@ -1,5 +1,9 @@
 # Validation and Verification: Practical Session
 
+Yoann DEWILDE\
+Enora DANILO\
+M2 ILa - Groupe 1
+
 This practical session will help to better understand GUI testing, and in particular the tool Selenium
 
 ## Exercises

@@ -1,4 +1,8 @@
-## Page Object Model
+# Page Object Model
+
+Yoann DEWILDE\
+Enora DANILO\
+M2 ILa - Groupe 1
 
 The image below shows the poll page of the [Simba Organizer](https://github.com/barais/doodlestudent/) application discussed in classes.
 
@@ -17,20 +21,25 @@ Divisé en 2 composants :
 
 ```java
 class PollPage {
-    public String getTitle();
-    public String getCreationDate();
-    public String getLocation();
-    public boolean getHaveMeal();
-
     // Boutons en haut de la page
     public void newPoll() {}
     public void sharePoll() {}
     public void openChat() {}
     public void openPad() {}
-    
-    public void submitWish(String username, String email, boolean useIcs, String icsPath, boolean haveFoodPreferences, String foodPreferences, ChoicesComponent choices) {}
 
-    public void postComment(String username, String comment) {}
+    public String getTitle();
+    public String getCreationDate();
+    public String getLocation();
+    public boolean getHaveMeal();
+    
+
+    /**
+     * @param icsPath use only if useIcs is true
+     * @param foodPreferences use only if haveFoodPreferences is true
+     */
+    public PollPage submitWish(String username, String email, boolean useIcs, String icsPath, boolean haveFoodPreferences, String foodPreferences, ChoicesComponent choices) {}
+
+    public CommentComponent postComment(String username, String comment) {}
 }
 ```
 
@@ -51,8 +60,8 @@ class ChoicesComponent {
     public int getParticipantsCount() {}
     public int getParticipantsCountOnEvent(EventTimeComponent event) {}
 
-    public void selectEvent(String username, EventTimeComponent event) {}
-    public void selectEvents(String username, EventTimeComponent... selection) {}
+    public EventTimeComponent selectEvent(String username, EventTimeComponent event) {}
+    public List<EventTimeComponent> selectEvents(String username, EventTimeComponent... selection) {}
 }
 ```
 
@@ -79,7 +88,7 @@ class CommentsSectionComponent {
 
     public List<CommentComponent> getComments() {}
 
-    public void post(String username, String content) {}
+    public CommentComponent post(String username, String content) {}
 }
 ```
 
